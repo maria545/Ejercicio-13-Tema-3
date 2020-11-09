@@ -1,0 +1,46 @@
+﻿<Window x:Class="Ejercicio_13_Tema_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ejercicio_13_Tema_3"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="546" Width="449"
+        MinHeight="500" MinWidth="200"
+        Icon="calc.ico">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="botones">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="50"/>
+            <EventSetter Event="Click" Handler="Button_Click"/>
+        </Style>
+    </Window.Resources>
+       
+    <Grid x:Name="Grid">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="Black" BorderThickness="2" Margin="10" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Viewbox x:Name="ViewBox" HorizontalAlignment="Right">
+                <TextBlock x:Name="EscribirTextBlock" TextAlignment="Right"/>
+            </Viewbox>
+        </Border>
+
+        <Button Tag="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" FontSize="50" Margin="5" Click="Button_Click">
+            <Viewbox>
+                <Label>0</Label>
+            </Viewbox>
+        </Button>
+
+    </Grid>
+</Window>
