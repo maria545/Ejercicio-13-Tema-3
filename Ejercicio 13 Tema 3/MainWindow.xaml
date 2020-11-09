@@ -8,6 +8,7 @@
         Title="Calculadora" Height="546" Width="449"
         MinHeight="500" MinWidth="200"
         Icon="calc.ico">
+    
     <Window.Resources>
         <Style TargetType="Button" x:Key="botones">
             <Setter Property="Margin" Value="5"/>
